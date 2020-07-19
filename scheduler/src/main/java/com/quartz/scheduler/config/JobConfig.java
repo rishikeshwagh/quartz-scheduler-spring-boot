@@ -38,7 +38,6 @@ public class JobConfig {
        simpleJob.setJobDataMap(simpleJobDataMap);
        schedulerService.scheduleSimpleJob(simpleJob);
 
-        //-----------------
         JobDataMap cronJobDataMap = new JobDataMap();
         cronJobDataMap.put("jobClass", CronJob.class);
 
