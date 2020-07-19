@@ -22,16 +22,16 @@ public class CronJob implements Job {
     public void execute(JobExecutionContext context) throws JobExecutionException {
 
         //get calender instance and set Time values to 0
-//        Calendar calendar = Calendar.getInstance();
-//        calendar.set(Calendar.HOUR_OF_DAY, 0);
-//        calendar.set(Calendar.MINUTE, 0);
-//        calendar.set(Calendar.SECOND, 0);
-//        calendar.set(Calendar.MILLISECOND, 0);
-//        //end time for metric request
-//        Date endTime = calendar.getTime();
-//        calendar.add(Calendar.DATE, -1);
-//        //start time for metric request
-//        Date startTime = calendar.getTime();
+       Calendar calendar = Calendar.getInstance();
+       calendar.set(Calendar.HOUR_OF_DAY, 0);
+       calendar.set(Calendar.MINUTE, 0);
+       calendar.set(Calendar.SECOND, 0);
+       calendar.set(Calendar.MILLISECOND, 0);
+       //end time
+       Date endTime = calendar.getTime();
+       calendar.add(Calendar.DATE, -1);
+       //start time
+       Date startTime = calendar.getTime();
 
         log.info("Getting Account list", LocalDateTime.now());
 
