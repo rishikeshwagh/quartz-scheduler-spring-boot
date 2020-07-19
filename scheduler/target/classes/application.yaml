@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: quartz
+  messages:
+    use-code-as-default-message: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      hibernate.implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      hibernate.physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+  quartz:
+    job-store-type: jdbc
+    jdbc.initialize-schema: never
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instancename: quartz-scheduler
+            instanceId: AUTO
+            jobFactory.class: org.quartz.simpl.SimpleJobFactory
+          threadPool.threadCount: 5
+          jobStore:
+            useProperties: false
+            misfireThreshold: 60000
+            maxMisfiresToHandleAtATime: 5
+            isClustered: true
+            clusterCheckinInterval: 10000
+  profiles:
+    active: local

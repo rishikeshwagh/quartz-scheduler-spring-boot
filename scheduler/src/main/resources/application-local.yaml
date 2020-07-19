@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: quartz
+  messages:
+    use-code-as-default-message: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      hibernate.implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      hibernate.physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+  datasource:
+    url: jdbc:mysql://localhost:3306/quartzdemo
+    username: root
+    password: root@12345

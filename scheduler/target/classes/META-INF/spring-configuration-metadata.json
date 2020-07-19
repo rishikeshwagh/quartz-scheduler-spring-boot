@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "local",
+      "type": "com.quartz.scheduler.SchedulerApplication",
+      "sourceType": "com.quartz.scheduler.SchedulerApplication"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
