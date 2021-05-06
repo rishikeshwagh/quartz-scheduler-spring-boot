@@ -33,7 +33,7 @@ public class CronJob implements Job {
        //start time
        Date startTime = calendar.getTime();
 
-        log.info("Getting Account list", LocalDateTime.now());
+        log.info("TASK IS IN PROGRESS", LocalDateTime.now());
 
 
     }
